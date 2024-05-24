@@ -17,7 +17,7 @@ def exec():
             if j.get('type') == 'PushEvent' and j.get('payload', {}).get('commits'):
                 c = j.get('payload', {}).get('commits')
                 for com in c:
-                    author = com.get('author', {}).get('name'),
+                    author = com.get('author', {}).get('name')
                     message =  re.sub(r'[\.\,\-\;\|\:\?\!\(\)\{\}]', '', com.get('message', '').lower())
                     m = message.split()
                     if len(m) > 2:
